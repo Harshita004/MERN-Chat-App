@@ -1,0 +1,381 @@
+.App {
+  width: 100vw;
+  height: 100vh;
+  color: #212121;
+  font-family: 'Jost', sans-serif;
+	background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+  display: grid;
+  place-items: center;
+}
+body {
+  margin: 0%;
+  padding: 0%;
+}
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
+
+.joinChatContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.joinChatContainer h3 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.joinChatContainer input {
+  width: 210px;
+  height: 40px;
+  margin: 7px;
+  border: 2px solid #43a047;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 16px;
+}
+
+#create-new-room {
+  width: 225px;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 16px;
+  background: #43a047;
+  color: #fff;
+  cursor: pointer;
+}
+
+#create-new-room:hover {
+  background: #2e7d32;
+}
+
+#logout {
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 16px;
+  background: #863440;
+  color: #fff;
+  cursor: pointer;
+}
+
+#logout:hover {
+  background: #bc0808;
+}
+
+.chat-window {
+  width: 300px;
+  height: 420px;
+}
+
+.chat-window p {
+  margin: 0;
+}
+.chat-window .chat-header {
+  height: 45px;
+  border-radius: 0px 6px 0px 0px;
+  background: #263238;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+}
+.chat-window .chat-header p {
+  display: block;
+  padding: 0 1em 0 2em;
+  color: #fff;
+  font-weight: 700;
+  line-height: 45px;
+}
+
+.chat-window .chat-body {
+  height: calc(450px - (45px + 70px));
+  border: 1px solid #263238;
+  background: #fff;
+
+  position: relative;
+}
+.chat-window .chat-body .message-container {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.chat-window .chat-body .message-container::-webkit-scrollbar {
+  display: none;
+}
+.chat-window .chat-body .message {
+  height: auto;
+  padding: 10px;
+  display: flex;
+}
+
+.chat-window .chat-body .message .message-content{
+  width: auto;
+  height: auto;
+  min-height: 40px;
+  max-width: 120px;
+  background-color: cornflowerblue;
+  color: white;
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
+  margin-left: 5px;
+  padding-right: 5px;
+  padding-left: 5px;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+#other {
+  justify-content: flex-start;
+  border-radius: 0px 10px 10px 10px;
+}
+
+#other .message-content {
+  justify-content: flex-start;
+}
+
+#other .message-meta {
+  justify-content: flex-start;
+  margin-left: 5px;
+}
+
+#you {
+  justify-content: flex-end;
+  border-radius: 10px 0px 10px 10px;
+}
+
+#you .message-content {
+  justify-content: flex-end;
+  background-color: #43a047;
+}
+
+#you .message-meta {
+  justify-content: flex-end;
+  margin-right: 5px;
+}
+
+.message-meta #author {
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.chat-window .chat-body .message .message-meta {
+  display: flex;
+  font-size: 12px;
+}
+
+.chat-window .chat-footer {
+  height: 40px;
+  border: 1px solid #263238;
+  border-top: none;
+  display: flex;
+}
+
+.chat-window .chat-footer input {
+  height: 100%;
+  flex: 85%;
+  border: 0;
+  padding: 0 0.7em;
+  font-size: 1em;
+  border-right: 1px dotted #607d8b;
+
+  outline: none;
+  font-family: "Open Sans", sans-serif;
+}
+
+.chat-window .chat-footer button {
+  border: 0;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  flex: 15%;
+  height: 100%;
+  background: transparent;
+  outline: none;
+  font-size: 25px;
+  color: lightgray;
+}
+
+.chat-window .chat-footer button:hover {
+  color: #43a047;
+}
+.hide {
+  opacity: 0 !important;
+}
+
+.main{
+	width: 350px;
+	height: 500px;
+	overflow: hidden;
+	border-radius: 10px;
+	box-shadow: 5px 20px 50px #000;
+	background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+}
+
+.super{
+	display: flex;
+	justify-content: center;
+	font-family: 'Jost', sans-serif;
+	margin: 1.75rem;
+}
+
+#chk{
+	display: none;
+}
+
+.signup{
+	position: relative;
+	width:100%;
+	height: 100%;
+}
+
+label{
+	color: #fff;
+	font-size: 2.3em;
+	justify-content: center;
+	display: flex;
+	margin: 60px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: .5s ease-in-out;
+}
+input{
+	width: 60%;
+	height: 20px;
+	background: #e0dede;
+	justify-content: center;
+	display: flex;
+	margin: 20px auto;
+	padding: 10px;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+}
+button{
+	width: 60%;
+	height: 40px;
+	margin: 10px auto;
+	justify-content: center;
+	display: block;
+	color: #fff;
+	background: #573b8a;
+	font-size: 1em;
+	font-weight: bold;
+	margin-top: 20px;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	transition: .2s ease-in;
+	cursor: pointer;
+}
+button:hover{
+	background: #6d44b8;
+}
+.login{
+	height: 460px;
+	background: #eee;
+	border-radius: 60% / 10%;
+	transform: translateY(-180px);
+	transition: .8s ease-in-out;
+}
+.login label{
+	color: #573b8a;
+	transform: scale(.6);
+}
+
+#chk:checked ~ .login{
+	transform: translateY(-500px);
+}
+#chk:checked ~ .login label{
+	transform: scale(1);	
+}
+#chk:checked ~ .signup label{
+	transform: scale(.6);
+}
+
+.chat-footer input {
+  margin-top: 0px;
+  border-radius: 0px 0px 0px 0px;
+}
+
+.chat-footer button {
+  margin-top: 0px;
+  border-radius: 0px 0px 5px 0px;
+  background: white;
+}
+
+#announce {
+  display: flex;
+  justify-content: center;
+  color: gray;
+  padding-top: 5px;
+}
+
+#copy {
+  padding: 10px;
+	background: #263238;
+	color: #fff;
+	font-size: 18px;
+	border: none;
+	outline: none;
+	border-radius: 10px;
+	cursor: pointer;
+  width: 40px;
+  margin-top: 3px;
+  padding: 8px;
+}
+
+#copy:active {
+	background: grey;
+}
+
+#copied {
+  font-size: 10px;
+  color: #FFFF00;
+}
+
+.full {
+  display: flex;
+}
+
+.full .members {
+  width: 200px;
+  border-radius: 6px 0px 0px 6px;
+  background-color: white;
+}
+
+.full .members .members-header {
+  height: 45px;
+  border-radius: 6px 0px 0px 0px;
+  background: #263238;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.full .members .members-header p {
+  display: block;
+  padding: 0 1em 0 2em;
+  color: #fff;
+  font-weight: 700;
+  line-height: 45px;
+}
+.member {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid black;
+}
+
+.full .members .members-header button {
+  margin-top: 10px;
+  border-radius: 5px;
+  padding: 5px;
+  background: #863440;
+  cursor: pointer;
+}
+
+.full .members .members-header button:hover {
+  background: #bc0808;
+}
